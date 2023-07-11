@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap')
+	;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	background: #c8e8e9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+h1 {
+	margin-left: 50px;
+	text-align: left;
+	font-family: 'Poppins', sans-serif;
+	font-size: 40px;
+	color: #3e2093;
+}
+
+.container {
+	width: 85%;
+	background: #fff;
+	border-radius: 6px;
+	padding: 20px 60px 30px 40px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container .content .left-side {
+	width: 25%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: left;
+	margin-top: 15px;
+	position: relative;
+}
+
+.content .left-side::before {
+	content: '';
+	position: absolute;
+	height: 70%;
+	width: 2px;
+	right: -15px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #afafb6;
+}
+
+.content .left-side .details {
+	margin: 14px;
+	text-align: center;
+}
+
+.content .left-side .details i {
+	font-size: 30px;
+	color: #3e2093;
+	margin-bottom: 10px;
+}
+
+.content .left-side .details .topic {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.content .left-side .details .text-one, .content .left-side .details .text-two
+	{
+	font-size: 14px;
+	color: #afafb6;
+}
+
+.container .content .right-side {
+	width: 75%;
+	margin-left: 75px;
+}
+
+.content .right-side .topic-text {
+	font-size: 23px;
+	font-weight: 600;
+	color: #3e2093;
+}
+
+button {
+	background: #3e2093;
+	color: white;
+	padding: 10px 20px;
+	border: #3e2093;
+	cursor: pointer;
+	font-size: 16px;
+	display: block;
+	margin-left: 40px;
+	margin-top: 25px;
+	font-family: 'Poppins', sans-serif;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+	background-color: white; /* your desired color */
+	color: #3e2093;
+}
+
+
+@media ( max-width : 950px) {
+	.container {
+		width: 90%;
+		padding: 30px 40px 40px 35px;
+	}
+	.container .content .right-side {
+		width: 75%;
+		margin-left: 55px;
+	}
+}
+
+@media ( max-width : 820px) {
+	.container {
+		margin: 40px 0;
+		height: 100%;
+	}
+	.container .content {
+		flex-direction: column-reverse;
+	}
+	.container .content .left-side {
+		width: 100%;
+		flex-direction: row;
+		margin-top: 40px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.container .content .left-side::before {
+		display: none;
+	}
+	.container .content .right-side {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+th, td {
+	text-align: left;
+	padding: 0.7px;
+	border-bottom: 1px solid #ddd;
+}
+
+th {
+	background-color:#f2f2f2;
+}
+
+
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">HOPE FOUNDATION</a>
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="login.html">Home</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="container">
+	<h1>ADMIN</h1>
+		<div class="content">
+			<div class="left-side">
+					<button onclick="loadEvents()">EVENTS</button>
+					<br>
+					<button onclick="loadTransaction()">TRANSACTION</button>
+					<br>
+					<button onclick="loadDonor()">DONOR</button>
+					<br>
+					<button onclick="loadVol()">VOLUNTEER</button>
+					<br>
+					<button onclick="loadStaff()">STAFF</button>				
+			</div>
+			<div class="right-side">
+					<table id="events">
+						<thead>
+							<tr>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<table id="trans">
+						<thead>
+							<tr>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<table id="donor">
+						<thead>
+							<tr>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<table id="vol">
+						<thead>
+							<tr>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+					<table id="staff">
+						<thead>
+							<tr>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	<!--  <div class="a">
+		<div class="b">
+			<button onclick="loadEvents()">EVENTS</button>
+			<br>
+			<button onclick="loadTransaction()">TRANSACTION</button>
+			<br>
+			<button onclick="loadDonor()">DONOR</button>
+			<br>
+			<button onclick="loadVol()">VOLUNTEER</button>
+			<br>
+			<button onclick="loadStaff()">STAFF</button>
+		</div>
+		<div class="c">
+			<table id="events">
+				<thead>
+					<tr>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<table id="trans">
+				<thead>
+					<tr>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<table id="donor">
+				<thead>
+					<tr>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<table id="vol">
+				<thead>
+					<tr>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<table id="staff">
+				<thead>
+					<tr>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>-->
+	<script>
+		function loadEvents() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("events").getElementsByTagName(
+							'tbody')[0].innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "Events", true);
+			xhttp.send();
+			var table = document.getElementById("trans");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("donor");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("vol");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("staff");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+		}
+
+		function loadTransaction() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("trans").getElementsByTagName(
+							'tbody')[0].innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "Trans", true);
+			xhttp.send();
+			var table = document.getElementById("events");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("donor");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("vol");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("staff");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+		}
+
+		function loadDonor() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("donor").getElementsByTagName(
+							'tbody')[0].innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "Donor", true);
+			xhttp.send();
+			var table = document.getElementById("events");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("trans");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("vol");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("staff");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+		}
+
+		function loadVol() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("vol")
+							.getElementsByTagName('tbody')[0].innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "Vol", true);
+			xhttp.send();
+			var table = document.getElementById("events");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("trans");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("donor");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("staff");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+		}
+
+		function loadStaff() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("staff").getElementsByTagName(
+							'tbody')[0].innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("GET", "Staff", true);
+			xhttp.send();
+			var table = document.getElementById("events");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("trans");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("donor");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+			var table = document.getElementById("vol");
+			var rowCount = table.rows.length;
+			for (var i = rowCount - 1; i > 0; i--) {
+				table.deleteRow(i);
+			}
+		}
+	</script>
+
+</body>
+</html>

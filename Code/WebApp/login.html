@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HOPE FOUNDATION</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="C:\Users\bhair\Downloads\w3.css">
+<!-- jQuery library -->
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+img {
+	margin-top: 10px;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	background: #c8e8e9;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	color: #3e2093;
+	font-size: 18px;
+	outline: none;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 6px;
+	background: white;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-top: 125px;
+	margin-left: 75px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button5:hover {
+	background: #5029bc;
+	color: white;
+	left: 50%;
+}
+
+.css2 {
+	color: white;
+	background-color: black;
+	font-size: 25px;
+	font-family: 'Poppins', sans-serif;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing:  3px;
+	margin-top: 55px;
+}
+</style>
+</head>
+<link rel="stylesheet" href="C:\Users\bhair\Downloads\w3.css">
+
+<body>
+
+	<div class="w3-container">
+
+		<nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">HOPE FOUNDATION</a>
+				</div>
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="login.html">Home</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<marquee class="css2" direction="right">Upcoming Event For Next Week - Stray Dog Adoption</marquee>
+
+	</div>
+
+	<div class="w3-row">
+		<div class="w3-col s3 w3-col-3">
+			<div class="w3-container w3-left" style="width: 100%">
+				<div>
+					<a href="AdLogin.html">
+						<button class="button button5">
+							<b>ADMIN</b>
+						</button>
+					</a><br> <a href="donate.html">
+						<button class="button button5">
+							<b>DONATE NOW</b>
+						</button>
+					</a><br> <a href="volop.html">
+						<button class="button button5">
+							<b>TO VOLUNTEER</b>
+						</button>
+					</a><br>
+				</div>
+			</div>
+		</div>
+		<div class="w3-col s9 w3-col-9 w3-center">
+			<div id="carouselExampleIndicators" class="carousel slide"
+				data-ride="carousel" style="width: 100%">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0"
+						class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" style="width: 100%">
+					<div class="carousel-item active">
+						<img class="d-block w-100"
+							src="C:\Users\bhair\Downloads\dogadopt.jpg" alt="top slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100"
+							src="C:\Users\bhair\Downloads\ngoimghappy.jpg" alt="First slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="C:\Users\bhair\Downloads\tfi2.jpg"
+							alt="Second slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100"
+							src="C:\Users\bhair\Downloads\ngoimg2.jpg" alt="Third slide">
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100"
+							src="C:\Users\bhair\Downloads\ngotree.jpg" alt="Fourth slide">
+						    
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators"
+					role="button" data-slide="prev"> <span
+					class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+					class="sr-only">Previous</span>
+				</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
+					role="button" data-slide="next"> <span
+					class="carousel-control-next-icon" aria-hidden="true"></span> <span
+					class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Automatic Slideshow - change image every 3 seconds <div class="w3-container w3-left" style="width:25%" >
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			myIndex++;
+			if (myIndex > x.length) {
+				myIndex = 1
+			}
+			x[myIndex - 1].style.display = "block";
+			setTimeout(carousel, 3000);
+		}
+	</script>
+</body>
+</html>
