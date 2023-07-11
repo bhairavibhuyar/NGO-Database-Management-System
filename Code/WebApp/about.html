@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="C:\Users\bhakt\Downloads\w3.css">
+<!-- jQuery library -->
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+.column {
+	float: left;
+	width: 33.3%;
+	margin-bottom: 16px;
+	padding: 0 8px;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin: 8px;
+}
+
+.about-section {
+	padding: 64px;
+	text-align: center;
+	background-color: #474e5d;
+	color: white;
+}
+
+.container { 
+	padding: 0 16px;
+}
+
+.container::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.title {
+	color: grey;
+}
+
+.button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	background-color: #000;
+	text-align: center;
+	cursor: pointer;
+	width: 100%;
+}
+
+.button:hover {
+	background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+	.column {
+		width: 100%;
+		display: block;
+	}
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">HOPE FOUNDATION</a>
+			</div>
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="login.html">Home</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+				<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="about-section">
+		<h1>HOPE FOUNDATION</h1>
+		<h2>About Us</h2>
+		<p>Welcome to our NGO! We are a non-governmental organization
+			dedicated to improving the lives of people and communities in need.</p>
+		<p>Our mission is to promote social justice, equality, and
+			sustainability through education, advocacy, and direct action. We
+			believe that every person has the right to a dignified and fulfilling
+			life, and we work tirelessly to ensure that this vision becomes a
+			reality for everyone</p>
+		<p>Our programs focus on a wide range of issues, including poverty
+			alleviation, access to healthcare and education, environmental
+			protection, and human rights. We work in partnership with local
+			communities, governments, and other organizations to design and
+			implement effective and sustainable solutions to these complex
+			problems.</p>
+	</div>
+
+	<h2 style="text-align: center">Our Initiatives</h2>
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img src="C:\Users\bhair\Downloads\cleanliness.jpg" alt="Jane"
+					style="width: 100%">
+				<div class="container">
+					<h2>Cleanliness Drive</h2>
+					<p class="title">03-01-2023</p>
+					<p>Our NGO initiated a cleanliness drive aimed at improving the
+						hygiene and sanitation of local communities. We organized teams of
+						volunteers who worked tirelessly to clean up streets, parks, and
+						public areas. Through our efforts, we were able to raise awareness
+						about the importance of cleanliness and promote a culture of
+						responsibility and civic engagement.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<img src="C:\Users\bhair\Downloads\tfi.jpg" alt="Mike"
+					style="width: 100%">
+				<div class="container">
+					<h2>Teach For India</h2>
+					<p class="title">25-01-2023</p>
+					<p>Our NGO launched an initiative to support Teach For India,
+						an organization dedicated to providing quality education to
+						underprivileged children. We partnered with local schools and
+						recruited enthusiastic and dedicated volunteers who worked as
+						teachers and mentors. Through our efforts, we were able to improve
+						access to education and empower young minds with the tools they
+						need to succeed.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<img src="C:\Users\bhair\Downloads\treepl.jpg" alt="John"
+					style="width: 100%">
+				<div class="container">
+					<h2>Vrikshropan</h2>
+					<p class="title">19-02-2023</p>
+					<p>Our NGO organized a tree plantation drive to combat
+						deforestation and promote environmental sustainability. We worked
+						with local communities and schools to identify suitable areas for
+						planting, and engaged volunteers to help with the planting
+						process. Through our efforts, we were able to raise awareness
+						about the importance of preserving our natural resources and
+						promote a greener, more sustainable future for all.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
